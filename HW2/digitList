@@ -1,0 +1,5 @@
+def digitList(n):
+    n = str(n)
+    x = list(n)
+    x = list(map(int,x))
+    print(x)
