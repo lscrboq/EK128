@@ -1,0 +1,11 @@
+def twoSums(L):
+    positive = []
+    negative = []
+    for x in L:
+        if x > 0:
+            positive.append(x)
+        elif x < 0:
+            negative.append(x)
+    a = str(sum(positive))
+    b = str(sum(negative))
+    print("The sum of the positive number are: " + a + "\nThe sum of the negative numbers are: " + b)
