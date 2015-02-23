@@ -1,0 +1,15 @@
+def superCollatz(N):
+    y =[]
+    while True:
+        if N%2 == 0:
+            y.append(N)
+            N = (N/2)
+        else:
+            y.append(N)
+            N = (3*N+1)
+
+        if N in y:
+            N = str(N)
+            x = str(len(y))
+            print("The first number to repeat was: " + N + "\nThe number of steps it took was: "+x)
+            return
