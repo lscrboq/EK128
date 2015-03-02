@@ -1,0 +1,7 @@
+def quadmath(a, b, c):
+    float(a)
+    float(b)
+    float(c)
+    x = ((-b) + sqrt(b**2 - (4*a*c)))/(2*a)
+    y = ((-b) - sqrt(b**2 - (4*a*c)))/(2*a)
+    print("Roots: " + str(x) + str(y))
