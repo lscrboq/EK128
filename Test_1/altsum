@@ -1,0 +1,2 @@
+def altsum(l):
+    return sum([x * (-1)**(l).index(x)for x in l])
