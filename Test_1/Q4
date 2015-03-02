@@ -10,7 +10,6 @@ names=["Noah", "Esther", "Jessica", "Diego", "Jerome", "Rachel", "Arslan",
 average = sum(len(name) for name in names)/len(names)
 print("The average length is " + str(average))
 print(max(names, key=len))
-print(min(names, key=len))
 for x in names:
     if len(x) == len(min(names, key=len)):
         print(x)
