@@ -1,0 +1,10 @@
+x = []
+y = input("gimme some text: \n")
+x.append(y)
+while y != 0:
+    y = input()
+    x.append(y)
+    if y == "":
+        break
+print("This is what you typed:")
+print(*x, sep='\n')
