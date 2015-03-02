@@ -1,0 +1,55 @@
+choices= [['pie', 'latte'], ['cake', 'capucino'], ['figs', None],
+    ['cake', 'cognac'], ['cake', 'cognac'], [None, None], ['apple',
+    'cognac'], [None, None], ['cookies', None], ['cake',
+    'capucino'], ['apple', 'cognac'], ['apple', 'capucino'], [None,
+    None], [None, 'latte'], ['figs', 'capucino'], ['figs', 'tea'],
+    ['figs', 'capucino'], ['strawberries', 'tea'], ['cookies',
+    'coffee'], ['strawberries', None], ['figs', 'cognac'],
+    ['apple', None], ['strawberries', 'latte'], ['apple', 'latte'],
+    ['cookies', 'cognac'], [None, 'capucino'], ['pie', 'tea'],
+    ['ice cream', 'latte'], ['ice cream', 'latte'], ['cake',
+    'tea'], ['ice cream', None], ['cookies', 'latte'],
+    ['strawberries', 'latte'], ['cake', 'latte'], ['cookies',
+    'latte'], ['cake', 'capucino'], ['cake', 'tea'], ['cookies',
+    'latte'], ['cake', 'tea'], ['cookies', None], ['cake',
+    'cognac'], ['pie', None], ['cake', 'tea'], ['strawberries',
+    'coffee'], ['ice cream', None], ['apple', 'tea'], ['figs',
+    None], ['apple', 'cognac'], ['ice cream', 'tea'], ['cookies',
+    'cognac'], [None, 'latte'], ['apple', 'latte'], [None,
+    'capucino'], ['ice cream', 'coffee'], ['cookies', 'latte'],
+    [None, None], [None, 'latte'], ['strawberries', 'cognac'],
+    ['strawberries', 'tea'], ['pie', 'capucino'], ['cake',
+    'latte'], ['cake', 'latte'], ['ice cream', 'capucino'],
+    ['apple', 'capucino'], ['ice cream', 'tea'], ['ice cream',
+    'coffee'], ['apple', 'coffee'], ['ice cream', 'coffee'], [None,
+    'tea'], ['cake', 'tea'], ['cake', 'cognac'], [None, 'cognac'],
+    ['cake', 'coffee'], ['pie', None], [None, 'coffee'], ['apple',
+    'cognac'], [None, 'cognac'], ['apple', 'cognac'], ['figs',
+    'coffee'], ['cake', None], [None, None], ['cookies', 'latte'],
+    ['cake', 'latte'], ['cake', 'capucino'], ['apple', 'cognac'],
+    [None, 'cognac'], ['strawberries', 'latte'], [None, 'latte'],
+    ['cookies', 'cognac'], [None, 'tea'], ['ice cream', 'coffee'],
+    ['pie', 'cognac'], ['figs', 'coffee'], ['cake', 'latte'],
+    ['strawberries', 'cognac'], ['pie', 'tea'], ['figs', 'latte'],
+    ['cookies', 'tea'], ['cookies', 'latte'], ['cake', None]]
+
+desserts = ([d[0] for d in choices])
+drinks = ([d[1] for d in choices])
+desserts_1 = {}
+drinks_1 = {}
+for x in desserts:
+    if x not in desserts_1:
+        desserts_1[x] = 0
+    desserts_1[x] += 1
+print("desserts are: \n")
+print(*desserts_1.items(), sep="\n")
+for x in drinks:
+    if x not in drinks_1:
+        drinks_1[x] = 0
+    drinks_1[x] += 1
+print("drinks are: \n")
+print(*drinks_1.items(), sep="\n")
+f = len(choices)
+
+
+print("The total number of combinations are: " + str(f))
