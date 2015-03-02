@@ -1,0 +1,16 @@
+names=["Noah", "Esther", "Jessica", "Diego", "Jerome", "Rachel", "Arslan",
+  "Nicholas", "Benjamin", "Charles", "Benjamin", "William", "Abraham",
+  "Ricardo", "Nicholas", "Daniel", "Adeeb", "Nathaniel", "David",
+  "David", "Kenneth", "Tate", "Ricky", "Veronica", "Blake", "Sabrina",
+  "Brian", "Baraa", "Jared", "Douglas", "Jeffrey", "Erostin", "Trent",
+  "Nicholas", "Michaela", "Erin", "Anton", "Khai", "Simone", "Jasper",
+  "Sami", "Illya", "Eric", "Bonnie", "Joseph", "Jack", "Barry",
+  "Shuxian", "Chengjie"]
+
+average = sum(len(name) for name in names)/len(names)
+print("The average length is " + str(average))
+print(max(names, key=len))
+print(min(names, key=len))
+for x in names:
+    if len(x) == len(min(names, key=len)):
+        print(x)
