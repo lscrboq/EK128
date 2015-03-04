@@ -1,0 +1,3 @@
+def letter_frequency(s):
+    letters = collections.Counter(s)
+    print(letters)
