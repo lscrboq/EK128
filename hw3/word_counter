@@ -1,0 +1,5 @@
+def word_frequency(s):
+    s = s.casefold()
+    s = s.split()
+    c = Counter(s)
+    print(c)
