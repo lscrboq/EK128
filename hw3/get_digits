@@ -1,0 +1,34 @@
+def get_digits(n, d):
+    x = []
+    y = []
+    z = []
+    a = 'nonrepeating: '
+    b = 'repeating: '
+    while True:
+        n *= 10
+        if n in x:
+            break
+            
+        else:
+            x.append(n)
+            y.append(divmod(n,d)[0])
+            n = divmod(n,d)[1]
+    x = []
+    n//= 10
+    while True:
+        n *= 10
+        if n in x:
+            break
+            
+        else:
+            x.append(n)
+            z.append(divmod(n,d)[0])
+            n = divmod(n,d)[1]
+    y = y[:-len(z)]
+    
+    if z ==[0]:
+        z == []
+    
+    
+    print(str(a) + str(y))
+    print(str(b) + str(z))
