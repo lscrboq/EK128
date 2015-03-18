@@ -1,0 +1,139 @@
+
+
+#Hill test
+def is_hill(seq):
+    L = list(seq)
+    B = []
+    up_flag = bool
+    down_flag = bool
+    x = 1
+    for i in L:
+        i = ord(i)
+        B.append(i)
+    for t in range(len(B)-1):
+        if int(B[t+1]) >= int(B[t]):
+            up_flag = True
+            break
+        else:
+            up_flag = False
+    for t in range(len(B)-1):
+        if B[t] > B[t + 1]:
+            x = int(t)
+            break
+        else:
+            down_flag = False
+    for t in range(len(B) - 1):
+        if B[x] > B[x+1]:
+            down_flag = True
+            break
+
+    if down_flag and up_flag is True:
+        print('Hill is True')
+        return True
+    else:
+        print('Hill is False')
+        return False
+        
+#valley test
+
+def is_valley(seq):
+    L = list(seq)
+    B = []
+    up_flag = bool
+    down_flag = bool
+    x = 1
+    for i in L:
+        i = ord(i)
+        B.append(i)
+    for t in range(len(B)-1):
+        if int(B[t+1]) <= int(B[t]):
+            down_flag = True
+            break
+        else:
+            down_flag = False
+    for t in range(len(B)-1):
+        if B[t] < B[t + 1]:
+            x = int(t)
+            break
+        else:
+            up_flag = False
+    for t in range(len(B) - 1):
+        if B[x] < B[x+1]:
+            up_flag = True
+            break
+
+    if down_flag and up_flag is True:
+        print('Valley is True')
+        return True
+    else:
+        print('Valley is False')
+        return False
+        
+#Plane test
+
+def is_plane(seq):
+    L = list(seq)
+    B = []
+    flag = bool
+    x = 1
+    for i in L:
+        i = ord(i)
+        B.append(i)
+    for t in range(len(B)-1):
+        if int(B[t+1]) != int(B[t]):
+            flag = False
+            break
+        else:
+            flag = True
+    if flag is True:
+        print("Plane is True")
+    else:
+        print("Plane is False")
+        
+#Ramp test
+
+def is_ramp(seq):
+    L = list(seq)
+    B = []
+    flag = bool
+    x = 1
+    for i in L:
+        i = ord(i)
+        B.append(i)
+    for t in range(len(B)-1):
+        if int(B[t]) >= int(B[t+1]):
+            flag = False
+            break
+        else:
+            flag = True
+    if flag is True:
+        print("Ramp is True")
+    else:
+        print("Ramp is False")
+        
+        
+#Slope test
+
+def is_slope(seq):
+    L = list(seq)
+    B = []
+    flag = bool
+    x = 1
+    for i in L:
+        i = ord(i)
+        B.append(i)
+    for t in range(len(B)-1):
+        if int(B[t]) <= int(B[t+1]):
+            flag = False
+            break
+        else:
+            flag = True
+    if flag is True:
+        print("Slope is True")
+    else:
+        print("Slope is False")
+        
+        
+        
+        
+      
