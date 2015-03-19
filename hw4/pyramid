@@ -1,0 +1,12 @@
+from math import sqrt
+
+def pyramid(n):
+    letters = list((2*n*'abcdefghijklmnopqrstuvwxyz'))
+    line_length = n*2-1
+    line = 0
+    for line in range(n):
+        char_len = 1 + 2*(line)
+        print('-'*int((line_length - char_len)/2), end = '')
+        for i in range(char_len):
+            print(letters[char_len - 1 - abs(i - int(char_len/2))], end = '')
+        print('-'*int((line_length - char_len)/2))
