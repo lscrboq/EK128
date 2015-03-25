@@ -1,0 +1,11 @@
+def pack_crayons(x,n=6):
+    B = []
+    C = []
+    for i in x:
+        if i > 6:
+            B.append(i)
+            x.remove(i)
+    t = (sum(x)/int(n))
+    t = math.ceil(t)
+    fraction_filled = sum(x)/(t*n)
+    print("number of rows: " + str(t),"fraction filled: " + str(fraction_filled), "rejected Lengths:" + str(len(B)))
